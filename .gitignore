@@ -1,0 +1,11 @@
+/.vs
+/UCSC.SWFS.SRV.API/obj
+/UCSC.SWFS.SRV.API/bin
+/UCSC.SWFS.SRV.Entity/obj
+/UCSC.SWFS.SRV.Entity/bin
+/UCSC.SWFS.SRV.Repositories/bin
+/UCSC.SWFS.SRV.Repositories/obj
+/UCSC.SWFS.SRV.Service/obj
+/UCSC.SWFS.SRV.Service/bin
+/UCSC.SWFS.SRV.Dto/obj
+/UCSC.SWFS.SRV.Dto/bin

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UCSC.SWFS.SRV.Repositories"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UCSC.SWFS.SRV.Dto", "UCSC.SWFS.SRV.Dto\UCSC.SWFS.SRV.Dto.csproj", "{87B392C6-AAEE-496E-BF83-6A36BC5CF0CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UCSC.SWFS.SRV.Utilities", "UCSC.SWFS.SRV.Utilities\UCSC.SWFS.SRV.Utilities.csproj", "{FA646F37-D7CA-4552-A193-9B26EF22DAE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{87B392C6-AAEE-496E-BF83-6A36BC5CF0CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87B392C6-AAEE-496E-BF83-6A36BC5CF0CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87B392C6-AAEE-496E-BF83-6A36BC5CF0CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA646F37-D7CA-4552-A193-9B26EF22DAE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA646F37-D7CA-4552-A193-9B26EF22DAE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA646F37-D7CA-4552-A193-9B26EF22DAE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA646F37-D7CA-4552-A193-9B26EF22DAE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

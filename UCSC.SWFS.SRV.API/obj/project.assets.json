@@ -524,6 +524,30 @@
         "runtime": {
           "bin/placeholder/UCSC.SWFS.SRV.Entity.dll": {}
         }
+      },
+      "UCSC.SWFS.SRV.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.5",
+          "UCSC.SWFS.SRV.Utilities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UCSC.SWFS.SRV.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UCSC.SWFS.SRV.Repositories.dll": {}
+        }
+      },
+      "UCSC.SWFS.SRV.Utilities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/UCSC.SWFS.SRV.Utilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UCSC.SWFS.SRV.Utilities.dll": {}
+        }
       }
     }
   },
@@ -1297,6 +1321,16 @@
       "type": "project",
       "path": "../UCSC.SWFS.SRV.Entity/UCSC.SWFS.SRV.Entity.csproj",
       "msbuildProject": "../UCSC.SWFS.SRV.Entity/UCSC.SWFS.SRV.Entity.csproj"
+    },
+    "UCSC.SWFS.SRV.Repositories/1.0.0": {
+      "type": "project",
+      "path": "../UCSC.SWFS.SRV.Repositories/UCSC.SWFS.SRV.Repositories.csproj",
+      "msbuildProject": "../UCSC.SWFS.SRV.Repositories/UCSC.SWFS.SRV.Repositories.csproj"
+    },
+    "UCSC.SWFS.SRV.Utilities/1.0.0": {
+      "type": "project",
+      "path": "../UCSC.SWFS.SRV.Utilities/UCSC.SWFS.SRV.Utilities.csproj",
+      "msbuildProject": "../UCSC.SWFS.SRV.Utilities/UCSC.SWFS.SRV.Utilities.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1305,7 +1339,8 @@
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.4",
       "Swashbuckle.AspNetCore >= 6.2.3",
-      "UCSC.SWFS.SRV.Entity >= 1.0.0"
+      "UCSC.SWFS.SRV.Entity >= 1.0.0",
+      "UCSC.SWFS.SRV.Repositories >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1342,6 +1377,9 @@
           "projectReferences": {
             "D:\\UCSC\\Project Source Code\\UCSC-SWFS-Service\\UCSC.SWFS.SRV.Entity\\UCSC.SWFS.SRV.Entity.csproj": {
               "projectPath": "D:\\UCSC\\Project Source Code\\UCSC-SWFS-Service\\UCSC.SWFS.SRV.Entity\\UCSC.SWFS.SRV.Entity.csproj"
+            },
+            "D:\\UCSC\\Project Source Code\\UCSC-SWFS-Service\\UCSC.SWFS.SRV.Repositories\\UCSC.SWFS.SRV.Repositories.csproj": {
+              "projectPath": "D:\\UCSC\\Project Source Code\\UCSC-SWFS-Service\\UCSC.SWFS.SRV.Repositories\\UCSC.SWFS.SRV.Repositories.csproj"
             }
           }
         }

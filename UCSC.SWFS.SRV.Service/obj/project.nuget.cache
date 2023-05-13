@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "1D7NEENlpi/32YNsH9n9HqeCOoJqPYAStQ8VZG6g2xlPi1lkDbIt+CxhnPackB0wJSbrmnQK6bnknWQC3oIUmA==",
+  "success": true,
+  "projectFilePath": "D:\\UCSC\\Project Source Code\\UCSC-SWFS-Service\\UCSC.SWFS.SRV.Service\\UCSC.SWFS.SRV.Service.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://172.15.100.155:8081/repository/cloud-sol-artifacts-nuget/'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

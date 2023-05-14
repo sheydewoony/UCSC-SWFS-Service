@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UCSC.SWFS.SRV.Entity.Entities.Audit;
+using UCSC.SWFS.SRV.Entity.Entities;
 
-namespace UCSC.SWFS.SRV.Entity.Entities.UserManagemen
+namespace UCSC.SWFS.SRV.Entity.Entities
 {
     public class User : AuditFields
     {

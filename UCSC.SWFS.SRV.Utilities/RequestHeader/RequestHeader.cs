@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UCSC.SWFS.SRV.Utilities.RequestHeader
 {
-    public interface RequestHeader : IRequestHeader
+    public class RequestHeader : IRequestHeader
     {
         public int UserId { get; set; }
     }

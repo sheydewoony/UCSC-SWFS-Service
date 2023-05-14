@@ -1,4 +1,4 @@
-﻿namespace UCSC.SWFS.SRV.Entity.Entities.Audit
+﻿namespace UCSC.SWFS.SRV.Entity.Entities
 {
     public class AuditFields
     {
@@ -6,6 +6,6 @@
         public int CreatedBy { get; set; }
         public DateTime CreatedOn { get; set; }
         public int ModifiedBy { get; set; }
-        public DateTime ModifiedOn { get; set; }
+        public DateTime? ModifiedOn { get; set; }
     }
 }

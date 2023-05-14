@@ -1,5 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using UCSC.SWFS.SRV.API.Insfrastructure;
 using UCSC.SWFS.SRV.Entity.Context;
+using UCSC.SWFS.SRV.Service.Common;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +13,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddEntityFrameworkNpgsql().AddDbContext<SWFSDbContext>();
+builder.Services.AddAppDependencies();
+builder.Services.AddHostedService<BackgroundSchedulerService>();
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 var app = builder.Build();

@@ -4,9 +4,13 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using UCSC.SWFS.SRV.Entity.Entities;
 using UCSC.SWFS.SRV.Entity.Entities.UserManagemen;
+using Task = UCSC.SWFS.SRV.Entity.Entities.UserManagemen.Task;
 
 namespace UCSC.SWFS.SRV.Entity.Context
 {
@@ -18,6 +22,8 @@ namespace UCSC.SWFS.SRV.Entity.Context
             _configuration = configuration;
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Device> Devices { get; set; }
+        public DbSet<Schedule> Schedule { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -39,6 +45,17 @@ namespace UCSC.SWFS.SRV.Entity.Context
                .ForEach(p => p.SetColumnName(
                      p.GetColumnName(StoreObjectIdentifier.Table(
                          p.DeclaringEntityType.GetTableName()!, p.DeclaringEntityType.GetSchema()!)).ToLower()));
+
+            builder.Entity<Task>()
+                .HasOne(e => e.Device)
+                .WithMany(e => e.Tasks)
+                .HasForeignKey(e => e.DeviceId)
+                .IsRequired();
+
+            builder.Entity<Schedule>()
+                .HasMany(e => e.Tasks)
+                .WithOne()
+                .IsRequired();
         }
     }
 }

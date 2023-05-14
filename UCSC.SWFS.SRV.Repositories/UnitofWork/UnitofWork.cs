@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UCSC.SWFS.SRV.Repositories.Repository;
+using UCSC.SWFS.SRV.Repositories;
 using UCSC.SWFS.SRV.Utilities.RequestHeader;
 
 namespace UCSC.SWFS.SRV.Repositories.UnitofWork
@@ -14,6 +14,7 @@ namespace UCSC.SWFS.SRV.Repositories.UnitofWork
         private readonly TContext _context;
         private Dictionary<Type, object> repositories;
         private readonly IRequestHeader _requestHeader;
+        private bool disposed = false;
         public UnitofWork(TContext context, IRequestHeader requestHeader)
         {
             _context = context;
@@ -32,7 +33,29 @@ namespace UCSC.SWFS.SRV.Repositories.UnitofWork
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Dispose(true);
+
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    // clear repositories
+                    if (repositories != null)
+                    {
+                        repositories.Clear();
+                    }
+
+                    // dispose the db context.
+                    _context.Dispose();
+                }
+            }
+
+            disposed = true;
         }
 
         public IRepository<TEntity> GetRepository<TEntity>() where TEntity : class

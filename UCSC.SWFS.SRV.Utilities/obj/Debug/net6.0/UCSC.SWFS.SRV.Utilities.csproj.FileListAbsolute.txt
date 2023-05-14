@@ -1,0 +1,14 @@
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.Utilities\bin\Debug\net6.0\UCSC.SWFS.SRV.Utilities.deps.json
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.Utilities\bin\Debug\net6.0\UCSC.SWFS.SRV.Utilities.dll
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.Utilities\bin\Debug\net6.0\UCSC.SWFS.SRV.Utilities.pdb
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.Utilities\obj\Debug\net6.0\UCSC.SWFS.SRV.Utilities.csproj.AssemblyReference.cache
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.Utilities\obj\Debug\net6.0\UCSC.SWFS.SRV.Utilities.Resources.UserResource.resources
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.Utilities\obj\Debug\net6.0\UCSC.SWFS.SRV.Utilities.csproj.GenerateResource.cache
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.Utilities\obj\Debug\net6.0\UCSC.SWFS.SRV.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.Utilities\obj\Debug\net6.0\UCSC.SWFS.SRV.Utilities.AssemblyInfoInputs.cache
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.Utilities\obj\Debug\net6.0\UCSC.SWFS.SRV.Utilities.AssemblyInfo.cs
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.Utilities\obj\Debug\net6.0\UCSC.SWFS.SRV.Utilities.csproj.CoreCompileInputs.cache
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.Utilities\obj\Debug\net6.0\UCSC.SWFS.SRV.Utilities.dll
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.Utilities\obj\Debug\net6.0\refint\UCSC.SWFS.SRV.Utilities.dll
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.Utilities\obj\Debug\net6.0\UCSC.SWFS.SRV.Utilities.pdb
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.Utilities\obj\Debug\net6.0\ref\UCSC.SWFS.SRV.Utilities.dll

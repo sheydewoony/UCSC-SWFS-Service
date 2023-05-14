@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "UCSC.SWFS.SRV.Utilities/1.0.0": {
+        "runtime": {
+          "UCSC.SWFS.SRV.Utilities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UCSC.SWFS.SRV.Utilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

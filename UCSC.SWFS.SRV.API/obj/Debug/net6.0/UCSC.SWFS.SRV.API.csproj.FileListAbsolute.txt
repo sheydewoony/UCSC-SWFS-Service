@@ -1,3 +1,9 @@
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\UCSC.SWFS.SRV.API.csproj.AssemblyReference.cache
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\UCSC.SWFS.SRV.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\UCSC.SWFS.SRV.API.AssemblyInfoInputs.cache
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\UCSC.SWFS.SRV.API.AssemblyInfo.cs
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\UCSC.SWFS.SRV.API.csproj.CoreCompileInputs.cache
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\UCSC.SWFS.SRV.API.MvcApplicationPartsAssemblyInfo.cache
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\appsettings.Development.json
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\appsettings.json
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\UCSC.SWFS.SRV.API.exe
@@ -18,6 +24,8 @@ D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\Microsoft.Extensions.Hosting.Abstractions.dll
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
@@ -44,13 +52,7 @@ D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\UCSC.SWFS.SRV.Repositories.pdb
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\UCSC.SWFS.SRV.Service.pdb
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\UCSC.SWFS.SRV.Utilities.pdb
-D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\UCSC.SWFS.SRV.API.csproj.AssemblyReference.cache
-D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\UCSC.SWFS.SRV.API.GeneratedMSBuildEditorConfig.editorconfig
-D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\UCSC.SWFS.SRV.API.AssemblyInfoInputs.cache
-D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\UCSC.SWFS.SRV.API.AssemblyInfo.cs
-D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\UCSC.SWFS.SRV.API.csproj.CoreCompileInputs.cache
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\UCSC.SWFS.SRV.API.MvcApplicationPartsAssemblyInfo.cs
-D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\UCSC.SWFS.SRV.API.MvcApplicationPartsAssemblyInfo.cache
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\staticwebassets.build.json
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\staticwebassets.development.json
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\scopedcss\bundle\UCSC.SWFS.SRV.API.styles.css
@@ -60,5 +62,4 @@ D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\UCSC.SWFS.SRV.API.pdb
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\UCSC.SWFS.SRV.API.genruntimeconfig.cache
 D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\obj\Debug\net6.0\ref\UCSC.SWFS.SRV.API.dll
-D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
-D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\UCSC\Project Source Code\UCSC-SWFS-Service\UCSC.SWFS.SRV.API\bin\Debug\net6.0\Newtonsoft.Json.dll

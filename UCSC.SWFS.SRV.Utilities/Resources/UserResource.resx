@@ -120,4 +120,16 @@
   <data name="SMFS_ERR_01" xml:space="preserve">
     <value>Unable to fetch users</value>
   </data>
+  <data name="SMFS_ERR_02" xml:space="preserve">
+    <value>Exception occured while execute GetAllPlants()</value>
+  </data>
+  <data name="SMFS_ERR_03" xml:space="preserve">
+    <value>Exception occured while execute SavePlant()</value>
+  </data>
+  <data name="SMFS_ERR_04" xml:space="preserve">
+    <value>Exception occured while execute GetAllDevices()</value>
+  </data>
+  <data name="SMFS_ERR_05" xml:space="preserve">
+    <value>Exception occured while execute SaveDevice()</value>
+  </data>
 </root>

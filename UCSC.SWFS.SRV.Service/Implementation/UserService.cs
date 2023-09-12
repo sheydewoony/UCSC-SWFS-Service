@@ -9,7 +9,7 @@ using UCSC.SWFS.SRV.Dto;
 using UCSC.SWFS.SRV.Dto.Response;
 using UCSC.SWFS.SRV.Entity.Entities;
 using UCSC.SWFS.SRV.Repositories.Intefaces;
-using UCSC.SWFS.SRV.Service.Common;
+using UCSC.SWFS.SRV.Service.Common.MQTT;
 using UCSC.SWFS.SRV.Service.Interfaces;
 using UCSC.SWFS.SRV.Utilities.Resources;
 

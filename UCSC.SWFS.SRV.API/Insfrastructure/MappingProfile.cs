@@ -10,6 +10,14 @@ namespace UCSC.SWFS.SRV.API.Insfrastructure
         {
             CreateMap<UserDto, User>();
             CreateMap<User, UserDto>();
+            CreateMap<Plant, PlantDto>();
+            CreateMap<PlantDto, Plant>();
+            CreateMap<Device, DeviceDto>();
+            CreateMap<DeviceDto, Device>();
+            CreateMap<SensorData, SensorValueDto>();
+            CreateMap<SensorValueDto, SensorData>();
+            CreateMap<SensorDataDto, SensorData>();
+            CreateMap<SensorData, SensorDataDto>();
         }
     }
 }

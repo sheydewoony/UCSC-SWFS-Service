@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UCSC.SWFS.SRV.Service.Common
+namespace UCSC.SWFS.SRV.Service.Common.MQTT
 {
     public class MQTTBrockerService : IMQTTBrockerService
     {
@@ -28,7 +28,7 @@ namespace UCSC.SWFS.SRV.Service.Common
             var message = new MqttApplicationMessageBuilder()
                 .WithTopic(topic)
                 .WithPayload(payload)
-                .WithQualityOfServiceLevel(MqttQualityOfServiceLevel.AtLeastOnce)              
+                .WithQualityOfServiceLevel(MqttQualityOfServiceLevel.AtLeastOnce)
                 .Build();
 
             await mqttClient.PublishAsync(message);

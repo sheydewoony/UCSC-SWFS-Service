@@ -11,18 +11,18 @@ namespace UCSC.SWFS.SRV.API.Filters
             try
             {
                 IRequestHeader service = actionContext.HttpContext.RequestServices.GetService<IRequestHeader>();
-                if (actionContext.HttpContext.Request.Headers.TryGetValue("user", out var value) && !String.IsNullOrEmpty(value))
+                if (actionContext.HttpContext.Request.Headers.TryGetValue("User", out var value) && !String.IsNullOrEmpty(value))
                 {
                     service.UserId = Convert.ToInt32((string)value);
                 }
                 else
                 {
-                    BadRequest(actionContext, "user");
+                    BadRequest(actionContext, "User");
                 }
             }
             catch (Exception ex)
             {
-                BadRequest(actionContext, "user");
+                BadRequest(actionContext, "User");
             }
 
 

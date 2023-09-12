@@ -23,5 +23,10 @@ namespace UCSC.SWFS.SRV.Repositories.Implementation
         {
             return _unitOfWork.GetRepository<TEntity>().GetAll(predicate);
         }
+
+        public async Task<TEntity> InsertAsync(TEntity entity)
+        {
+          return await _unitOfWork.GetRepository<TEntity>().InsertAsync(entity);
+        }
     }
 }

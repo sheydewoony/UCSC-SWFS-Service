@@ -11,5 +11,6 @@ namespace UCSC.SWFS.SRV.Repositories.Intefaces
     public interface IBaseRepository<TEntity> where TEntity : class
     {
         IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate = null);
+        Task<TEntity> InsertAsync(TEntity entity);
     }
 }

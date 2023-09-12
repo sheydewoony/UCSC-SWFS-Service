@@ -9,8 +9,6 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using UCSC.SWFS.SRV.Entity.Entities;
-using UCSC.SWFS.SRV.Entity.Entities.UserManagemen;
-using Task = UCSC.SWFS.SRV.Entity.Entities.UserManagemen.Task;
 
 namespace UCSC.SWFS.SRV.Entity.Context
 {
@@ -22,8 +20,10 @@ namespace UCSC.SWFS.SRV.Entity.Context
             _configuration = configuration;
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Plant> Plants { get; set; }
         public DbSet<Device> Devices { get; set; }
         public DbSet<Schedule> Schedule { get; set; }
+        public DbSet<SensorData> SensorData { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -46,16 +46,19 @@ namespace UCSC.SWFS.SRV.Entity.Context
                      p.GetColumnName(StoreObjectIdentifier.Table(
                          p.DeclaringEntityType.GetTableName()!, p.DeclaringEntityType.GetSchema()!)).ToLower()));
 
-            builder.Entity<Task>()
+        /*    builder.Entity<PlantTask>()
                 .HasOne(e => e.Device)
                 .WithMany(e => e.Tasks)
                 .HasForeignKey(e => e.DeviceId)
                 .IsRequired();
-
+        */
             builder.Entity<Schedule>()
-                .HasMany(e => e.Tasks)
+                .HasMany(e => e.PlantTasks)
                 .WithOne()
                 .IsRequired();
+
+            builder.Entity<Plant>()
+            .HasAlternateKey(e => new { e.RowId, e.ColumnId });
         }
     }
 }

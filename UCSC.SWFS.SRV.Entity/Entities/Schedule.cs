@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UCSC.SWFS.SRV.Entity.Entities.UserManagemen
+namespace UCSC.SWFS.SRV.Entity.Entities
 {
     public class Schedule : AuditFields
     {
@@ -17,6 +17,6 @@ namespace UCSC.SWFS.SRV.Entity.Entities.UserManagemen
         public DateTime EndDateTime { get; set; }
         public string Name { get; set; }
         public string Status { get; set; }
-        public List<Task> Tasks { get; set; }
+        public List<PlantTask> PlantTasks { get; set; }
     }
 }

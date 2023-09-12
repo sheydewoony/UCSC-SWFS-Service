@@ -68,5 +68,41 @@ namespace UCSC.SWFS.SRV.Utilities.Resources {
                 return ResourceManager.GetString("SMFS_ERR_01", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception occured while execute GetAllPlants().
+        /// </summary>
+        public static string SMFS_ERR_02 {
+            get {
+                return ResourceManager.GetString("SMFS_ERR_02", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception occured while execute SavePlant().
+        /// </summary>
+        public static string SMFS_ERR_03 {
+            get {
+                return ResourceManager.GetString("SMFS_ERR_03", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception occured while execute GetAllDevices().
+        /// </summary>
+        public static string SMFS_ERR_04 {
+            get {
+                return ResourceManager.GetString("SMFS_ERR_04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception occured while execute SaveDevice().
+        /// </summary>
+        public static string SMFS_ERR_05 {
+            get {
+                return ResourceManager.GetString("SMFS_ERR_05", resourceCulture);
+            }
+        }
     }
 }

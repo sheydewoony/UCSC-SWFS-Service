@@ -22,56 +22,7 @@ namespace UCSC.SWFS.SRV.Entity.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("UCSC.SWFS.SRV.Entity.Entities.User", b =>
-                {
-                    b.Property<int>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("userid");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("UserId"));
-
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("integer")
-                        .HasColumnName("createdby");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("timestamp without time zone")
-                        .HasColumnName("createdon");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("email");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("boolean")
-                        .HasColumnName("isactive");
-
-                    b.Property<int>("ModifiedBy")
-                        .HasColumnType("integer")
-                        .HasColumnName("modifiedby");
-
-                    b.Property<DateTime?>("ModifiedOn")
-                        .HasColumnType("timestamp without time zone")
-                        .HasColumnName("modifiedon");
-
-                    b.Property<string>("PasswordHash")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("passwordhash");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("username");
-
-                    b.HasKey("UserId");
-
-                    b.ToTable("users");
-                });
-
-            modelBuilder.Entity("UCSC.SWFS.SRV.Entity.Entities.UserManagemen.Device", b =>
+            modelBuilder.Entity("UCSC.SWFS.SRV.Entity.Entities.Device", b =>
                 {
                     b.Property<int>("DeviceId")
                         .ValueGeneratedOnAdd()
@@ -80,10 +31,6 @@ namespace UCSC.SWFS.SRV.Entity.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("DeviceId"));
 
-                    b.Property<string>("Configuration")
-                        .HasColumnType("text")
-                        .HasColumnName("configuration");
-
                     b.Property<int>("CreatedBy")
                         .HasColumnType("integer")
                         .HasColumnName("createdby");
@@ -92,13 +39,27 @@ namespace UCSC.SWFS.SRV.Entity.Migrations
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("createdon");
 
+                    b.Property<string>("DeviceName")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("devicename");
+
+                    b.Property<string>("DeviceType")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("devicetype");
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("boolean")
                         .HasColumnName("isactive");
 
-                    b.Property<bool>("IsOnline")
-                        .HasColumnType("boolean")
-                        .HasColumnName("isonline");
+                    b.Property<float>("MaxValue")
+                        .HasColumnType("real")
+                        .HasColumnName("maxvalue");
+
+                    b.Property<float>("MinValue")
+                        .HasColumnType("real")
+                        .HasColumnName("minvalue");
 
                     b.Property<int>("ModifiedBy")
                         .HasColumnType("integer")
@@ -108,74 +69,118 @@ namespace UCSC.SWFS.SRV.Entity.Migrations
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("modifiedon");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("name");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("type");
-
-                    b.HasKey("DeviceId");
-
-                    b.ToTable("devices");
-                });
-
-            modelBuilder.Entity("UCSC.SWFS.SRV.Entity.Entities.UserManagemen.Schedule", b =>
-                {
-                    b.Property<int>("ScheduleId")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("PlantId")
                         .HasColumnType("integer")
-                        .HasColumnName("scheduleid");
+                        .HasColumnName("plantid");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ScheduleId"));
-
-                    b.Property<int>("CreatedBy")
+                    b.Property<int>("Port")
                         .HasColumnType("integer")
-                        .HasColumnName("createdby");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("timestamp without time zone")
-                        .HasColumnName("createdon");
-
-                    b.Property<DateTime>("EndDateTime")
-                        .HasColumnType("timestamp without time zone")
-                        .HasColumnName("enddatetime");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("boolean")
-                        .HasColumnName("isactive");
-
-                    b.Property<int>("ModifiedBy")
-                        .HasColumnType("integer")
-                        .HasColumnName("modifiedby");
-
-                    b.Property<DateTime?>("ModifiedOn")
-                        .HasColumnType("timestamp without time zone")
-                        .HasColumnName("modifiedon");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("name");
-
-                    b.Property<DateTime>("StartDateTime")
-                        .HasColumnType("timestamp without time zone")
-                        .HasColumnName("startdatetime");
+                        .HasColumnName("port");
 
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("status");
 
-                    b.HasKey("ScheduleId");
+                    b.Property<string>("Unit")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("unit");
 
-                    b.ToTable("schedule");
+                    b.HasKey("DeviceId");
+
+                    b.ToTable("devices");
                 });
 
-            modelBuilder.Entity("UCSC.SWFS.SRV.Entity.Entities.UserManagemen.Task", b =>
+            modelBuilder.Entity("UCSC.SWFS.SRV.Entity.Entities.Plant", b =>
+                {
+                    b.Property<int>("PlantId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("plantid");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("PlantId"));
+
+                    b.Property<int>("ColumnId")
+                        .HasColumnType("integer")
+                        .HasColumnName("columnid");
+
+                    b.Property<int>("CreatedBy")
+                        .HasColumnType("integer")
+                        .HasColumnName("createdby");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("createdon");
+
+                    b.Property<int>("FertilizerRequirement")
+                        .HasColumnType("integer")
+                        .HasColumnName("fertilizerrequirement");
+
+                    b.Property<string>("HealthStatus")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("healthstatus");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean")
+                        .HasColumnName("isactive");
+
+                    b.Property<int>("ModifiedBy")
+                        .HasColumnType("integer")
+                        .HasColumnName("modifiedby");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("modifiedon");
+
+                    b.Property<string>("PlantName")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("plantname");
+
+                    b.Property<string>("PlantType")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("planttype");
+
+                    b.Property<DateTime>("PlantingDate")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("plantingdate");
+
+                    b.Property<int>("RecLightIntensity")
+                        .HasColumnType("integer")
+                        .HasColumnName("reclightintensity");
+
+                    b.Property<int>("RecSoilMoisture")
+                        .HasColumnType("integer")
+                        .HasColumnName("recsoilmoisture");
+
+                    b.Property<int>("RecTemperatureMax")
+                        .HasColumnType("integer")
+                        .HasColumnName("rectemperaturemax");
+
+                    b.Property<int>("RecTemperatureMin")
+                        .HasColumnType("integer")
+                        .HasColumnName("rectemperaturemin");
+
+                    b.Property<string>("RowId")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("rowid");
+
+                    b.Property<int>("WaterRequirement")
+                        .HasColumnType("integer")
+                        .HasColumnName("waterrequirement");
+
+                    b.HasKey("PlantId");
+
+                    b.HasAlternateKey("RowId", "ColumnId");
+
+                    b.ToTable("plants");
+                });
+
+            modelBuilder.Entity("UCSC.SWFS.SRV.Entity.Entities.PlantTask", b =>
                 {
                     b.Property<int>("TaskId")
                         .ValueGeneratedOnAdd()
@@ -257,19 +262,175 @@ namespace UCSC.SWFS.SRV.Entity.Migrations
 
                     b.HasIndex("ScheduleId");
 
-                    b.ToTable("task");
+                    b.ToTable("planttask");
                 });
 
-            modelBuilder.Entity("UCSC.SWFS.SRV.Entity.Entities.UserManagemen.Task", b =>
+            modelBuilder.Entity("UCSC.SWFS.SRV.Entity.Entities.Schedule", b =>
                 {
-                    b.HasOne("UCSC.SWFS.SRV.Entity.Entities.UserManagemen.Device", "Device")
-                        .WithMany("Tasks")
+                    b.Property<int>("ScheduleId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("scheduleid");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ScheduleId"));
+
+                    b.Property<int>("CreatedBy")
+                        .HasColumnType("integer")
+                        .HasColumnName("createdby");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("createdon");
+
+                    b.Property<DateTime>("EndDateTime")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("enddatetime");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean")
+                        .HasColumnName("isactive");
+
+                    b.Property<int>("ModifiedBy")
+                        .HasColumnType("integer")
+                        .HasColumnName("modifiedby");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("modifiedon");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("name");
+
+                    b.Property<DateTime>("StartDateTime")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("startdatetime");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("status");
+
+                    b.HasKey("ScheduleId");
+
+                    b.ToTable("schedule");
+                });
+
+            modelBuilder.Entity("UCSC.SWFS.SRV.Entity.Entities.SensorData", b =>
+                {
+                    b.Property<int>("SensorDataID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("sensordataid");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("SensorDataID"));
+
+                    b.Property<int>("CreatedBy")
+                        .HasColumnType("integer")
+                        .HasColumnName("createdby");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("createdon");
+
+                    b.Property<int>("DeviceId")
+                        .HasColumnType("integer")
+                        .HasColumnName("deviceid");
+
+                    b.Property<string>("DeviceType")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("devicetype");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean")
+                        .HasColumnName("isactive");
+
+                    b.Property<int>("ModifiedBy")
+                        .HasColumnType("integer")
+                        .HasColumnName("modifiedby");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("modifiedon");
+
+                    b.Property<int>("PlantID")
+                        .HasColumnType("integer")
+                        .HasColumnName("plantid");
+
+                    b.Property<int>("Port")
+                        .HasColumnType("integer")
+                        .HasColumnName("port");
+
+                    b.Property<double>("Value")
+                        .HasColumnType("double precision")
+                        .HasColumnName("value");
+
+                    b.HasKey("SensorDataID");
+
+                    b.ToTable("sensordata");
+                });
+
+            modelBuilder.Entity("UCSC.SWFS.SRV.Entity.Entities.User", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("userid");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("UserId"));
+
+                    b.Property<int>("CreatedBy")
+                        .HasColumnType("integer")
+                        .HasColumnName("createdby");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("createdon");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("email");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean")
+                        .HasColumnName("isactive");
+
+                    b.Property<int>("ModifiedBy")
+                        .HasColumnType("integer")
+                        .HasColumnName("modifiedby");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("timestamp without time zone")
+                        .HasColumnName("modifiedon");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("passwordhash");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("username");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("users");
+                });
+
+            modelBuilder.Entity("UCSC.SWFS.SRV.Entity.Entities.PlantTask", b =>
+                {
+                    b.HasOne("UCSC.SWFS.SRV.Entity.Entities.Device", "Device")
+                        .WithMany()
                         .HasForeignKey("DeviceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("UCSC.SWFS.SRV.Entity.Entities.UserManagemen.Schedule", null)
-                        .WithMany("Tasks")
+                    b.HasOne("UCSC.SWFS.SRV.Entity.Entities.Schedule", null)
+                        .WithMany("PlantTasks")
                         .HasForeignKey("ScheduleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -277,14 +438,9 @@ namespace UCSC.SWFS.SRV.Entity.Migrations
                     b.Navigation("Device");
                 });
 
-            modelBuilder.Entity("UCSC.SWFS.SRV.Entity.Entities.UserManagemen.Device", b =>
+            modelBuilder.Entity("UCSC.SWFS.SRV.Entity.Entities.Schedule", b =>
                 {
-                    b.Navigation("Tasks");
-                });
-
-            modelBuilder.Entity("UCSC.SWFS.SRV.Entity.Entities.UserManagemen.Schedule", b =>
-                {
-                    b.Navigation("Tasks");
+                    b.Navigation("PlantTasks");
                 });
 #pragma warning restore 612, 618
         }
